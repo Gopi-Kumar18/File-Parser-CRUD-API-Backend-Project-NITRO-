@@ -11,7 +11,7 @@ Asynchronous Parsing: File parsing is handled in the background, preventing API 
 
 Real-Time Progress Tracking: Uses WebSockets (with SockJS & STOMP) to push live progress updates to the client.
 
-Full CRUD Functionality:
+**Full CRUD Functionality:**
 
 Create: Upload files.
 
@@ -21,7 +21,7 @@ Delete: Remove a file and its associated data.
 
 Database Persistence: All file metadata and parsed content are stored in a MySQL database.
 
-Tech Stack
+**Tech Stack**
 Backend: Spring Boot 3
 
 Database: MySQL
@@ -34,7 +34,7 @@ Real-time Communication: Spring WebSocket, STOMP, SockJS
 
 Build Tool: Maven
 
-🚀 Setup and Installation
+🚀**Setup and Installation**
 Follow these steps to get the application running locally.
 
 Prerequisites
@@ -50,14 +50,14 @@ An API testing tool like Postman
 git clone File-Parser-CRUD-API-Backend-Project-NITRO-
 cd File-Parser-CRUD-API-Backend-Project-NITRO-
 
-2. Configure the Database
+***2. Configure the Database***
 Open your MySQL client.
 
 Create a new database for the application. The application will create the necessary tables on startup.
 
 CREATE DATABASE **file_parser_db**;
 
-3. Configure Application Properties
+***3. Configure Application Properties***
 Navigate to src/main/resources/application.properties.
 
 Update the MySQL connection details (spring.datasource.url, spring.datasource.username, spring.datasource.password) to match your local setup.
@@ -68,10 +68,10 @@ Update the MySQL connection details (spring.datasource.url, spring.datasource.us
 
 ```jwt.secret=your-very-long-and-secure-secret-key-that-is-at-least-256-bitsa long, random, and secure string()```
 
-4. Build and Run the Application
+***4. Build and Run the Application***
 You can run the application using :
 
-mvn spring-boot:run
+**mvn spring-boot:run**
 
 ```The application will start on http://localhost:8080.```
 
@@ -228,4 +228,5 @@ Import the Collection: Import the File Parser API.postman_collection.json file i
 Set Up Environment: The collection is configured to use a jwt_token variable. After you run the ***POST /authenticate request, the collection's test script will automatically save the token to this variable.***
 
 Run Requests: All protected endpoints under the "File Management" folder are pre-configured to use this token for authentication. Simply run the requests in order.
+
 
